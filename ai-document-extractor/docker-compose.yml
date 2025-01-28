@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  document_extractor:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONPATH=/app
+      - FLASK_ENV=development
